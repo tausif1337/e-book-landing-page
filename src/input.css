@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+/*
+  Our own colours, written once.
+
+  Tailwind reads every name starting with --color- and builds the normal
+  utilities out of it. So --color-brand gives us all of these for free:
+
+      bg-brand      text-brand      border-brand      ring-brand
+      hover:bg-brand      bg-brand/10      (any shade, any prefix)
+
+  Change the hex here and the whole page changes.
+*/
+@theme {
+  --color-brand: #c96442;
+  --color-brand-dark: #ad5234;
+}

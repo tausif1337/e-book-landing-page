@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>The Freelance Playbook — eBook by Md Tausif Hossain</title>
-    <meta
-      name="description"
-      content="Learn how to find freelance clients in 90 days. 180 pages and 12 ready-to-use templates."
-    />
+    <meta name="description" content="Learn how to find freelance clients in 90 days. 180 pages and 12 ready-to-use templates." />
 
     <!-- Poppins font from Google. -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Our Tailwind file. Build it with: npm run dev -->
     <link rel="stylesheet" href="./dist/output.css" />
@@ -23,38 +17,35 @@
 
   <!--
     Colours used on this page:
-      bg-[#c96442]    orange  - buttons and boxes
-      text-[#ad5234]  dark orange - orange text on white, easier to read
-      slate-900       almost black - headings and dark boxes
-      orange-50       cream - soft background for some sections
+      brand       orange - buttons and boxes
+      brand-dark  dark orange - orange text on white, easier to read
+      slate-900   almost black - headings and dark boxes
+      orange-50   cream - soft background for some sections
+
+    brand and brand-dark are ours. We made them in src/input.css.
+    slate-900 and orange-50 come free with Tailwind.
 
     Poppins is set once here on <body>. Every element inside gets it.
   -->
+
   <body class="bg-white font-[Poppins] text-slate-700">
     <!-- ================= 1. Menu bar ================= -->
-    <header
-      class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur"
-    >
-      <nav
-        class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4"
-      >
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <a href="#" class="text-lg font-extrabold text-slate-900">PLAYBOOK</a>
 
         <div class="flex items-center gap-4 md:gap-8">
           <!-- "hidden md:block" = hide on phone, show from 768px up. -->
-          <a href="#inside" class="hidden hover:text-[#ad5234] md:block">
+          <a href="#inside" class="hidden hover:text-brand-dark md:block">
             What you learn
           </a>
-          <a href="#author" class="hidden hover:text-[#ad5234] md:block">
+          <a href="#author" class="hidden hover:text-brand-dark md:block">
             Author
           </a>
-          <a href="#reviews" class="hidden hover:text-[#ad5234] md:block">
+          <a href="#reviews" class="hidden hover:text-brand-dark md:block">
             Reviews
           </a>
-          <a
-            href="#pricing"
-            class="rounded-lg bg-slate-900 px-4 py-2 font-semibold text-white hover:bg-slate-700 md:px-5"
-          >
+          <a href="#pricing" class="rounded-lg bg-slate-900 px-4 py-2 font-semibold text-white hover:bg-slate-700 md:px-5">
             Get the eBook
           </a>
 
@@ -66,18 +57,16 @@
                           instead of pushing the whole page down
               top-16    = 64px down, exactly the height of the bar (h-16)
           -->
+              
           <details class="md:hidden">
             <summary class="cursor-pointer list-none p-1 text-2xl">☰</summary>
 
             <!-- onclick closes the menu after you tap a link. -->
-            <div
-              onclick="this.parentElement.open = false"
-              class="absolute top-16 left-0 flex w-full flex-col gap-4 border-b border-slate-200 bg-white p-4 shadow-lg"
-            >
-              <a href="#inside" class="hover:text-[#ad5234]">What you learn</a>
-              <a href="#author" class="hover:text-[#ad5234]">Author</a>
-              <a href="#reviews" class="hover:text-[#ad5234]">Reviews</a>
-              <a href="#pricing" class="hover:text-[#ad5234]">Price</a>
+            <div onclick="this.parentElement.open = false" class="absolute top-16 left-0 flex w-full flex-col gap-4 border-b border-slate-200 bg-white p-4 shadow-lg">
+              <a href="#inside" class="hover:text-brand-dark">What you learn</a>
+              <a href="#author" class="hover:text-brand-dark">Author</a>
+              <a href="#reviews" class="hover:text-brand-dark">Reviews</a>
+              <a href="#pricing" class="hover:text-brand-dark">Price</a>
             </div>
           </details>
         </div>
@@ -86,21 +75,15 @@
 
     <!-- ================= 2. Hero ================= -->
     <section class="bg-orange-50 py-16 md:py-24">
-      <div
-        class="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2"
-      >
+      <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2">
         <div>
-          <span
-            class="rounded-full bg-[#c96442]/10 px-3 py-1 text-sm font-semibold text-[#ad5234]"
-          >
+          <span class="rounded-full bg-brand/10 px-3 py-1 text-sm font-semibold text-brand-dark">
             New · 2nd edition
           </span>
 
           <!-- Text grows with the screen: 36px phone, 48px tablet, 60px desktop. -->
-          <h1
-            class="mt-4 text-4xl font-extrabold text-slate-900 md:text-5xl lg:text-6xl"
-          >
-            Get your <span class="text-[#ad5234]">first clients</span> in 90
+          <h1 class="mt-4 text-4xl font-extrabold text-slate-900 md:text-5xl lg:text-6xl">
+            Get your <span class="text-brand-dark">first clients</span> in 90
             days.
           </h1>
 
@@ -115,44 +98,32 @@
             sm:flex-wrap   = if both do not fit on one line, the second button
                              moves down instead of squashing
           -->
+
           <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <a
-              href="#pricing"
-              class="rounded-lg bg-[#c96442] px-6 py-3 text-center font-semibold whitespace-nowrap text-white hover:bg-[#ad5234]"
-            >
+            <a href="#pricing" class="rounded-lg bg-brand px-6 py-3 text-center font-semibold whitespace-nowrap text-white hover:bg-brand-dark">
               Get the eBook — ৳499
             </a>
-            <a
-              href="#inside"
-              class="rounded-lg border border-slate-300 px-6 py-3 text-center font-semibold whitespace-nowrap hover:border-slate-900"
-            >
+            <a href="#inside" class="rounded-lg border border-slate-300 px-6 py-3 text-center font-semibold whitespace-nowrap hover:border-slate-900">
               Read one chapter free
             </a>
           </div>
 
-          <p class="mt-4 text-sm text-slate-500">
-            Download now · Money back in 30 days
-          </p>
         </div>
 
         <!-- Book cover. No image file — it is only a dark box with text. -->
-        <div
-          class="mx-auto flex aspect-[3/4] w-64 rotate-3 overflow-hidden rounded-lg bg-slate-900 shadow-2xl"
-        >
-          <div class="w-3 bg-[#c96442]"></div>
+        <div class="mx-auto flex aspect-[3/4] w-64 rotate-3 overflow-hidden rounded-lg bg-slate-900 shadow-2xl" >
+          <div class="w-3 bg-brand"></div>
 
           <div class="flex flex-1 flex-col p-6">
-            <p class="text-xs font-bold tracking-widest text-[#c96442]">
+            <p class="text-xs font-bold tracking-widest text-brand">
               2ND EDITION
             </p>
 
             <p class="mt-8 text-3xl leading-none font-extrabold text-white">
-              THE<br />FREELANCE<br /><span class="text-[#c96442]"
-                >PLAYBOOK</span
-              >
+              THE<br />FREELANCE<br /><span class="text-brand">PLAYBOOK</span>
             </p>
 
-            <div class="mt-4 h-1 w-12 bg-[#c96442]"></div>
+            <div class="mt-4 h-1 w-12 bg-brand"></div>
 
             <p class="mt-5 text-sm text-slate-400">
               Get your first clients in 90 days.
@@ -169,9 +140,7 @@
 
     <!-- ================= 3. Numbers ================= -->
     <section class="border-y border-slate-200 py-10">
-      <div
-        class="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 text-center md:grid-cols-4"
-      >
+      <div class="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 text-center md:grid-cols-4">
         <div>
           <p class="text-3xl font-extrabold text-slate-900">4,200+</p>
           <p class="mt-1 text-sm text-slate-500">Readers</p>
@@ -195,9 +164,7 @@
     <!-- scroll-mt-20 leaves room for the sticky menu when we jump here. -->
     <section id="inside" class="scroll-mt-20 py-16 md:py-24">
       <div class="mx-auto max-w-6xl px-4">
-        <h2
-          class="text-center text-3xl font-extrabold text-slate-900 md:text-4xl"
-        >
+        <h2 class="text-center text-3xl font-extrabold text-slate-900 md:text-4xl">
           What you will learn
         </h2>
         <p class="mx-auto mt-3 max-w-2xl text-center">
@@ -207,9 +174,8 @@
 
         <!-- 1 column on phone, 2 on small, 3 on large. -->
         <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <article
-            class="rounded-2xl border border-slate-200 p-6 hover:border-[#c96442] hover:shadow-lg"
-          >
+          
+          <article class="rounded-2xl border border-slate-200 p-6 hover:border-brand hover:shadow-lg">
             <p class="text-3xl">🎯</p>
             <h3 class="mt-4 text-lg font-bold text-slate-900">
               Choose your work
@@ -218,14 +184,12 @@
               Pick the kind of work that pays well. Learn how to say no to the
               rest.
             </p>
-            <p class="mt-4 text-sm font-semibold text-[#ad5234]">
+            <p class="mt-4 text-sm font-semibold text-brand-dark">
               Chapter 01 →
             </p>
           </article>
 
-          <article
-            class="rounded-2xl border border-slate-200 p-6 hover:border-[#c96442] hover:shadow-lg"
-          >
+          <article class="rounded-2xl border border-slate-200 p-6 hover:border-brand hover:shadow-lg">
             <p class="text-3xl">🧲</p>
             <h3 class="mt-4 text-lg font-bold text-slate-900">
               Your first 10 clients
@@ -234,14 +198,12 @@
               Write messages that people reply to. Find the four places where
               clients wait.
             </p>
-            <p class="mt-4 text-sm font-semibold text-[#ad5234]">
+            <p class="mt-4 text-sm font-semibold text-brand-dark">
               Chapter 03 →
             </p>
           </article>
 
-          <article
-            class="rounded-2xl border border-slate-200 p-6 hover:border-[#c96442] hover:shadow-lg"
-          >
+          <article class="rounded-2xl border border-slate-200 p-6 hover:border-brand hover:shadow-lg">
             <p class="text-3xl">📄</p>
             <h3 class="mt-4 text-lg font-bold text-slate-900">
               Write a good offer
@@ -250,14 +212,12 @@
               Copy a one-page offer. Add three lines that stop extra work
               without extra pay.
             </p>
-            <p class="mt-4 text-sm font-semibold text-[#ad5234]">
+            <p class="mt-4 text-sm font-semibold text-brand-dark">
               Chapter 05 →
             </p>
           </article>
 
-          <article
-            class="rounded-2xl border border-slate-200 p-6 hover:border-[#c96442] hover:shadow-lg"
-          >
+          <article class="rounded-2xl border border-slate-200 p-6 hover:border-brand hover:shadow-lg">
             <p class="text-3xl">💰</p>
             <h3 class="mt-4 text-lg font-bold text-slate-900">
               Set your price
@@ -266,14 +226,12 @@
               Stop charging by the hour. Know what to say when a client asks for
               a lower price.
             </p>
-            <p class="mt-4 text-sm font-semibold text-[#ad5234]">
+            <p class="mt-4 text-sm font-semibold text-brand-dark">
               Chapter 07 →
             </p>
           </article>
 
-          <article
-            class="rounded-2xl border border-slate-200 p-6 hover:border-[#c96442] hover:shadow-lg"
-          >
+          <article class="rounded-2xl border border-slate-200 p-6 hover:border-brand hover:shadow-lg">
             <p class="text-3xl">⚖️</p>
             <h3 class="mt-4 text-lg font-bold text-slate-900">
               Contract and payment
@@ -282,24 +240,23 @@
               Advance payment, part payments, late fees. Simple rules that help
               you get paid.
             </p>
-            <p class="mt-4 text-sm font-semibold text-[#ad5234]">
+            <p class="mt-4 text-sm font-semibold text-brand-dark">
               Chapter 09 →
             </p>
           </article>
 
-          <article
-            class="rounded-2xl border border-slate-200 p-6 hover:border-[#c96442] hover:shadow-lg"
-          >
+          <article class="rounded-2xl border border-slate-200 p-6 hover:border-brand hover:shadow-lg">
             <p class="text-3xl">🔁</p>
             <h3 class="mt-4 text-lg font-bold text-slate-900">Repeat work</h3>
             <p class="mt-2 text-sm">
               Turn one project into monthly work. Learn an easy way to ask for
               referrals.
             </p>
-            <p class="mt-4 text-sm font-semibold text-[#ad5234]">
+            <p class="mt-4 text-sm font-semibold text-brand-dark">
               Chapter 12 →
             </p>
           </article>
+
         </div>
       </div>
     </section>
@@ -309,11 +266,18 @@
       <div
         class="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-[280px_1fr]"
       >
-        <div
-          class="mx-auto flex size-48 items-center justify-center rounded-full bg-[#c96442]"
-        >
-          <span class="text-5xl font-extrabold text-white">MT</span>
-        </div>
+        <!--
+          object-cover = fill the circle without squashing the photo.
+          The picture is square already, but object-cover keeps it safe
+          if you ever swap in a photo that is not square.
+        -->
+        <img
+          src="./images/tausif.jpg"
+          alt="Md Tausif Hossain"
+          width="600"
+          height="600"
+          class="mx-auto size-48 rounded-full object-cover shadow-lg md:size-64"
+        />
 
         <div>
           <h2 class="text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -330,8 +294,38 @@
             question: how do you keep getting work? There is no theory here. You
             get the same messages, prices, and templates that I still use today.
           </p>
-          <p class="mt-6 text-sm text-slate-500">
-            tausif.bd · github.com/tausif1337 · linkedin.com/in/tausif1337
+          <!--
+            target="_blank" opens the link in a new tab.
+            rel="noopener" is a safety rule: it stops the new tab from
+            being able to touch this page. Always use the two together.
+          -->
+          <!-- flex-wrap = the links drop to the next line when they run out
+               of room, instead of pushing the page sideways. -->
+          <p class="mt-6 flex flex-wrap gap-x-5 gap-y-1 text-sm text-slate-500">
+            <a
+              href="https://www.tausif.bd"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-brand-dark hover:underline"
+            >
+              tausif.bd
+            </a>
+            <a
+              href="https://github.com/tausif1337"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-brand-dark hover:underline"
+            >
+              github.com/tausif1337
+            </a>
+            <a
+              href="https://linkedin.com/in/tausif1337"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-brand-dark hover:underline"
+            >
+              linkedin.com/in/tausif1337
+            </a>
           </p>
         </div>
       </div>
@@ -351,7 +345,7 @@
 
         <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <figure class="rounded-2xl border border-slate-200 p-6">
-            <p class="text-[#c96442]">★★★★★</p>
+            <p class="text-brand">★★★★★</p>
             <blockquote class="mt-3">
               "Chapter 3 helped me get a client in my first week. The book paid
               for itself."
@@ -360,7 +354,7 @@
               class="mt-5 flex items-center gap-3 border-t border-slate-100 pt-4"
             >
               <div
-                class="flex size-10 items-center justify-center rounded-full bg-[#c96442] text-xs font-bold text-white"
+                class="flex size-10 items-center justify-center rounded-full bg-brand text-xs font-bold text-white"
               >
                 NJ
               </div>
@@ -372,7 +366,7 @@
           </figure>
 
           <figure class="rounded-2xl border border-slate-200 p-6">
-            <p class="text-[#c96442]">★★★★★</p>
+            <p class="text-brand">★★★★★</p>
             <blockquote class="mt-3">
               "I used the offer template without changing anything. I got a
               ৳2,00,000 project the same month."
@@ -393,7 +387,7 @@
           </figure>
 
           <figure class="rounded-2xl border border-slate-200 p-6">
-            <p class="text-[#c96442]">★★★★★</p>
+            <p class="text-brand">★★★★★</p>
             <blockquote class="mt-3">
               "After the pricing chapter I raised my rate by 40%. No client left
               me."
@@ -459,7 +453,7 @@
             class="relative rounded-2xl bg-slate-900 p-8 text-white lg:scale-105"
           >
             <span
-              class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#c96442] px-3 py-1 text-xs font-bold uppercase"
+              class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3 py-1 text-xs font-bold uppercase"
             >
               Most popular
             </span>
@@ -478,7 +472,7 @@
             <!-- Put your real payment link in href. -->
             <a
               href="#"
-              class="mt-8 block rounded-lg bg-[#c96442] px-6 py-3 text-center font-semibold hover:bg-[#ad5234]"
+              class="mt-8 block rounded-lg bg-brand px-6 py-3 text-center font-semibold hover:bg-brand-dark"
             >
               Get everything
             </a>
@@ -495,17 +489,13 @@
     <!-- <details> opens and closes by itself. No JavaScript needed. -->
     <section id="faq" class="scroll-mt-20 py-16 md:py-24">
       <div class="mx-auto max-w-3xl px-4">
-        <h2
-          class="text-center text-3xl font-extrabold text-slate-900 md:text-4xl"
-        >
+        <h2 class="text-center text-3xl font-extrabold text-slate-900 md:text-4xl">
           Common questions
         </h2>
 
         <div class="mt-10">
           <details class="group border-b border-slate-200 py-4">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900"
-            >
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900">
               Is this book for beginners?
               <span class="shrink-0 group-open:rotate-180">⌄</span>
             </summary>
@@ -516,9 +506,7 @@
           </details>
 
           <details class="group border-b border-slate-200 py-4">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900"
-            >
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900">
               Which files will I get?
               <span class="shrink-0 group-open:rotate-180">⌄</span>
             </summary>
@@ -529,9 +517,7 @@
           </details>
 
           <details class="group border-b border-slate-200 py-4">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900"
-            >
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900">
               Is this only for developers?
               <span class="shrink-0 group-open:rotate-180">⌄</span>
             </summary>
@@ -542,9 +528,7 @@
           </details>
 
           <details class="group border-b border-slate-200 py-4">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900"
-            >
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900">
               What if the book does not help me?
               <span class="shrink-0 group-open:rotate-180">⌄</span>
             </summary>
@@ -555,9 +539,7 @@
           </details>
 
           <details class="group border-b border-slate-200 py-4">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900"
-            >
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900">
               Will I get future updates?
               <span class="shrink-0 group-open:rotate-180">⌄</span>
             </summary>
@@ -570,30 +552,12 @@
       </div>
     </section>
 
-    <!-- ================= 9. Last call ================= -->
-    <section class="bg-slate-900 py-16 text-center text-white md:py-24">
-      <div class="mx-auto max-w-6xl px-4">
-        <h2 class="text-3xl font-extrabold md:text-4xl">
-          Start this week, not next year.
-        </h2>
-        <p class="mt-4 text-slate-300">4,200 people have already started.</p>
-        <a
-          href="#pricing"
-          class="mt-8 inline-block rounded-lg bg-[#c96442] px-6 py-3 font-semibold hover:bg-[#ad5234]"
-        >
-          Get the eBook — ৳499
-        </a>
-      </div>
-    </section>
-
     <!-- ================= Footer ================= -->
-    <footer
-      class="border-t border-slate-200 py-8 text-center text-sm text-slate-500"
-    >
+    <footer class="border-t border-slate-200 py-8 text-center text-sm text-slate-500">
       © 2026 Md Tausif Hossain ·
-      <a href="#" class="hover:text-[#ad5234]">Terms</a> ·
-      <a href="#" class="hover:text-[#ad5234]">Privacy</a> ·
-      <a href="#faq" class="hover:text-[#ad5234]">Questions</a>
+      <a href="#" class="hover:text-brand-dark">Terms</a> ·
+      <a href="#" class="hover:text-brand-dark">Privacy</a> ·
+      <a href="#faq" class="hover:text-brand-dark">Questions</a>
     </footer>
   </body>
 </html>
