@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Dependencies
+# ---------------------------------------------------------------------------
+# Installed by "npm install". Never commit this — it is huge and it is rebuilt
+# from package.json + package-lock.json on any machine.
+node_modules/
+
+
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+# Tailwind generates dist/output.css from src/input.css.
+# Run "npm run dev" (watch) or "npm run build" (one time) to create it.
+#
+# If you want anyone to open index.html straight after cloning, WITHOUT
+# installing anything, delete the next line so the built CSS is committed.
+dist/
+
+# Stale build file in the wrong folder. Safe to delete from disk too.
+src/output.css
+
+
+# ---------------------------------------------------------------------------
+# Logs and caches
+# ---------------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+.parcel-cache/
+.npm/
+
+
+# ---------------------------------------------------------------------------
+# Secrets
+# ---------------------------------------------------------------------------
+# Payment keys, API keys, anything private. Never commit these.
+.env
+.env.*
+!.env.example
+
+
+# ---------------------------------------------------------------------------
+# Deploy tooling
+# ---------------------------------------------------------------------------
+.vercel/
+.netlify/
+
+
+# ---------------------------------------------------------------------------
+# Editors
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# ---------------------------------------------------------------------------
+# Operating system junk
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
